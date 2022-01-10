@@ -10,7 +10,7 @@ export class FeedbackComponent implements OnInit {
   rating = [0, 1, 2, 3, 4, 5]
 
   name: string;
-  selectedRating: any;
+  selectedRating: any = '0';
   comment: string;
   isSubmit = false;
 
@@ -21,8 +21,9 @@ export class FeedbackComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit() {
+    this.isSubmit = true;
+
     if (this.name && this.comment) {
-      this.isSubmit = true;
       var obj = {
         name: this.name,
         rating: this.selectedRating,
@@ -30,6 +31,7 @@ export class FeedbackComponent implements OnInit {
       }
 
       this.yourRating.emit(obj);
+      this.isSubmit = false;
     }
 
 

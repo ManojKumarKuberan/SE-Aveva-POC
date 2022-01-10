@@ -8,6 +8,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { TextareaAutosizeDirective } from '../directives/textareaAutosizeDirective/textarea-autosize.directive';
 import { FormsModule } from '@angular/forms';
 import { RatingPipe } from '../pipe/ratingPipe/rating.pipe';
+import { DisplayOrNotDirective } from '../directives/displayOrNot/display-or-not.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RatingPipe } from '../pipe/ratingPipe/rating.pipe';
     CustHomePageComponent,
     FeedbackComponent,
     TextareaAutosizeDirective,
+    DisplayOrNotDirective,
     RatingPipe
   ],
   imports: [

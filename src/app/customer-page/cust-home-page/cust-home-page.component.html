@@ -4,7 +4,7 @@
     <div class="home" (click)="route('home')" [ngClass]="{'active': subPage === 'home'}">Home</div>
     <div class="feedback" (click)="route('feedback')" [ngClass]="{'active': subPage === 'feedback'}">Feedback</div>
 
-    <div class="rated">You Rated: {{rated ? rated : 'N/A'}} <i class="fa fa-star"></i></div>
+    <div class="rated" appDisplayOrNot>You Rated: {{rated ? rated : 'N/A'}} <i class="fa fa-star"></i></div>
 </div>
 
 <div>

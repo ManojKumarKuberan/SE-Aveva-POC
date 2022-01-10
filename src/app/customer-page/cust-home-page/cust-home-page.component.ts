@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { DisplayOrNotDirective } from 'src/app/directives/displayOrNot/display-or-not.directive';
 
 @Component({
   selector: 'app-cust-home-page',
@@ -13,6 +14,9 @@ export class CustHomePageComponent implements OnInit {
   subPage: any;
   rated: any;
   subscription: Subscription;
+
+  @ViewChild(DisplayOrNotDirective)
+  displayOrNotDirective: DisplayOrNotDirective;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
@@ -33,6 +37,7 @@ export class CustHomePageComponent implements OnInit {
 
   yourRating(rating: any) {
     this.rated = rating.rating;
+    this.displayOrNotDirective.display();
   }
 
   ngOnDestroy(): void {
