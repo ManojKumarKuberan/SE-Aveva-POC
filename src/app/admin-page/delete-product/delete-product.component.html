@@ -1,0 +1,25 @@
+<div id="deleteProduct" class="row">
+    <form [formGroup]="deleteProductForm" (ngSubmit)="onSubmit(deleteProductForm)">
+
+        <div class="formItem col-12">
+            <h1 class="text-center">Delete Product</h1>
+        </div>
+
+        <div class="formItem col-12 row">
+            <div class="offset-1 col-1">
+                <label for="title" class="col-5">Title: </label>
+            </div>
+            <div class="col-9">
+                <select class="custom-select" formControlName="title">
+                    <option value="" disabled>Choose your title</option>
+                    <option *ngFor="let title of titles" [ngValue]="title.id">{{title.title}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="formItem col-12 text-center">
+            <button type="submit" class="btn btn-danger deleteBtn" [disabled]="deleteProductForm.invalid">Delete</button>
+        </div>
+
+    </form>
+</div>

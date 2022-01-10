@@ -1,0 +1,23 @@
+<div id="product" class="row">
+
+    <div class="col-6 cardBlock" *ngFor="let product of products">
+        <div class="card row h-100">
+            <div class="heading col-12">{{product.title | uppercase}}</div>
+
+            <div class="col-6">
+                <div class="price"><b>Price:</b> {{product.price | currency}}</div>
+
+                <div class="rating"><b>Rating: </b> <span [outerHTML]="product.rating.rate | rating"></span>
+                    ({{product.rating.count}})</div>
+
+                <div class="price"><b>Category:</b> {{product.category | titlecase }}</div>
+
+                <div class="price"><b>Description:</b> <br />{{product.description}}</div>
+            </div>
+
+            <div class="col-6">
+                <img class="prodImg" alt="product.image" [src]="product.image" />
+            </div>
+        </div>
+    </div>
+</div>

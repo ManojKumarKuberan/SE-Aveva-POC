@@ -1,0 +1,27 @@
+#feedback {
+    display: flex;
+    justify-content: center;
+
+    form {
+        width: -webkit-fill-available;
+        margin: 1rem 19rem;
+        padding: 1rem;
+        box-shadow: 1px 1px 5px 1px grey;
+
+        .form-group {
+            padding: 1rem;
+        }
+
+        .submitBtn {
+            text-align: right;
+        }
+
+        .error {
+            color: red;
+        }
+    }
+
+    .thanksMsg{
+        margin-top: 10rem;
+    }
+}

@@ -1,0 +1,59 @@
+<div id="addProduct" class="row">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm)">
+
+        <div class="formItem col-12">
+            <h1 class="text-center">Add Product</h1>
+        </div>
+
+        <div class="formItem col-12">
+            <label for="title" class="col-5">Title: </label>
+            <input id="title" class="col-7" type="text" formControlName="title">
+            <div class="alert alert-danger"
+                *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched">
+                *Please provide a title.
+            </div>
+        </div>
+
+        <div class="formItem col-12">
+            <label for="price" class="col-5">Price: </label>
+            <input id="price" class="col-7" type="text" formControlName="price">
+            <div class="alert alert-danger"
+                *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+                *Please provide a numberic price.
+            </div>
+        </div>
+
+        <div class="formItem col-12">
+            <label for="description" class="col-5">Description: </label>
+            <input id="description" class="col-7" type="text" formControlName="description">
+            <div class="alert alert-danger"
+                *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+                *Please provide a description.
+            </div>
+        </div>
+
+        <div class="formItem col-12">
+            <label for="image" class="col-5">Image: </label>
+            <input id="image" class="col-7" type="text" formControlName="image">
+            <div class="alert alert-danger"
+                *ngIf="productForm.get('image')?.invalid && productForm.get('image')?.touched">
+                *Please provide a image url.
+            </div>
+        </div>
+
+        <div class="formItem col-12">
+            <label for="category" class="col-5">Category: </label>
+            <input id="category" class="col-7" type="text" formControlName="category">
+            <div class="alert alert-danger"
+                *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+                *Please provide a category.
+            </div>
+        </div>
+
+        <div class="formItem col-12">
+            <button type="submit" class="btn btn-primary sendBtn" [disabled]="productForm.invalid">Send</button>
+            <button type="cancel" class="btn btn-secondary cancelBtn" (click)="cancel()">Cancel</button>
+        </div>
+
+    </form>
+</div>

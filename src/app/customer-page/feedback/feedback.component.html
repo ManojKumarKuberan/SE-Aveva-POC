@@ -1,0 +1,31 @@
+<div id="feedback">
+    <form>
+        <div class="form-group col-12">
+            <h1 class="text-center">Please Provide Your Feedback</h1>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="name" name="name">
+            <label class="error" *ngIf="isSubmit && !name">*Please enter the field</label>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rating</label>
+            <select class="form-control" [(ngModel)]="selectedRating" name="rating">
+                <option *ngFor="let r of rating" [value]="r">{{r}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Comment</label>
+            <textarea class="form-control" [(ngModel)]="comment" name="comment" appTextareaAutosize></textarea>
+            <label class="error" *ngIf="isSubmit && !comment">*Please enter the field</label>
+        </div>
+
+        <div class="form-group submitBtn">
+            <button (click)="onSubmit()" type="submit" class="btn btn-success">Submit</button>
+        </div>
+
+    </form>
+</div>
