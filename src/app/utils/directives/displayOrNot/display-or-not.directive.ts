@@ -9,12 +9,10 @@ export class DisplayOrNotDirective implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.log('after', this.elRef.nativeElement.style.display, this.elRef.nativeElement)
     this.elRef.nativeElement.style.display = 'none';
   }
 
   display() {
-    console.log('display', this.elRef.nativeElement.style.display, this.elRef.nativeElement)
     this.elRef.nativeElement.style.display = 'block';
   }
 

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { LoaderServiceService } from './service/loaderService/loader-service.service';
+import { LoaderServiceService } from './utils/service/loaderService/loader-service.service';
 
 @Component({
   selector: 'app-root',

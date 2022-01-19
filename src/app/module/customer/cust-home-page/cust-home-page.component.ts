@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { DisplayOrNotDirective } from 'src/app/directives/displayOrNot/display-or-not.directive';
+import { DisplayOrNotDirective } from 'src/app/utils/directives/displayOrNot/display-or-not.directive';
 
 @Component({
   selector: 'app-cust-home-page',

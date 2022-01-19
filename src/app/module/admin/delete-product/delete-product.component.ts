@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProductService } from 'src/app/service/productService/product.service';
+import { ProductService } from 'src/app/utils/service/productService/product.service';
 
 @Component({
   selector: 'app-delete-product',
