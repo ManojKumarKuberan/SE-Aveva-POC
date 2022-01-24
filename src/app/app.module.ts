@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoaderInterceptorInterceptor } from './utils/intercepter/loader-interceptor/loader-interceptor.interceptor';
+import { CommonsModule } from './commons/commons.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LoaderInterceptorInterceptor } from './utils/intercepter/loader-interce
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonsModule,
     HttpClientModule,
     FormsModule
   ],

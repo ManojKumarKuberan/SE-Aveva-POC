@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="back" (click)="back()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+
+    <ng-container *ngIf="this.url === 'admin'">
+        <div class="subPageLink" (click)="route('addProduct')" [ngClass]="{'active': subPage === 'addProduct'}">Add
+            Product
+        </div>
+        <div class="subPageLink" (click)="route('deleteProduct')" [ngClass]="{'active': subPage === 'deleteProduct'}">
+            Delete Product
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="this.url === 'customer'">
+        <div class="subPageLink" (click)="route('home')" [ngClass]="{'active': subPage === 'home'}">Home</div>
+        <div class="subPageLink" (click)="route('feedback')" [ngClass]="{'active': subPage === 'feedback'}">Feedback</div>
+        <div class="rated" appDisplayOrNot>You Rated: {{rated ? rated : 'N/A'}} <i class="fa fa-star"></i></div>
+    </ng-container>
+</div>

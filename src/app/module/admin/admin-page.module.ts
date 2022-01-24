@@ -6,6 +6,7 @@ import { AdminHomePageComponent } from './admin-home-page/admin-home-page.compon
 import { AddProductComponent } from './add-product/add-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { CommonsModule } from 'src/app/commons/commons.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
   imports: [
     CommonModule,
     AdminPageRoutingModule,
+    CommonsModule,
     ReactiveFormsModule
   ]
 })

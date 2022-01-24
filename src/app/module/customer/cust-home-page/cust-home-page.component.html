@@ -1,14 +1,7 @@
-<div class="custHeader">
-    <div class="back" (click)="back()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-
-    <div class="home" (click)="route('home')" [ngClass]="{'active': subPage === 'home'}">Home</div>
-    <div class="feedback" (click)="route('feedback')" [ngClass]="{'active': subPage === 'feedback'}">Feedback</div>
-
-    <div class="rated" appDisplayOrNot>You Rated: {{rated ? rated : 'N/A'}} <i class="fa fa-star"></i></div>
-</div>
+<app-header (routePath)="route($event)" [rated]="rated"></app-header>
 
 <div>
-    <app-products [products]="products" *ngIf="subPage === 'home'"></app-products>
+    <app-products [allProducts]="products" *ngIf="subPage === 'home'"></app-products>
     <app-feedback (yourRating)="yourRating($event)" *ngIf="!rated && subPage === 'feedback'">
     </app-feedback>
     <div *ngIf="rated && subPage === 'feedback'" class="thanksMsg">

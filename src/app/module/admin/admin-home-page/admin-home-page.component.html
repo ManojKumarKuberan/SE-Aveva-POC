@@ -1,12 +1,4 @@
-<div class="adminHeader">
-    <div class="back" (click)="back()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
-
-    <div class="addProduct" (click)="route('addProduct')" [ngClass]="{'active': subPage === 'addProduct'}">Add Product
-    </div>
-    <div class="deleteProduct" (click)="route('deleteProduct')" [ngClass]="{'active': subPage === 'deleteProduct'}">
-        Delete Product
-    </div>
-</div>
+<app-header (routePath)="route($event)"></app-header>
 
 <div>
     <app-add-product *ngIf="subPage === 'addProduct'"></app-add-product>

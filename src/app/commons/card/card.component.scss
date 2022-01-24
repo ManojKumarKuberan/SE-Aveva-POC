@@ -1,0 +1,41 @@
+@import "../../../assets/styles/common.scss";
+
+.card {
+    padding: 5%;
+    flex-direction: row;
+    border: 0;
+    box-shadow: 1px 1px 5px 1px grey;
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        font-weight: 900;
+        height: fit-content;
+    }
+
+    .prodDetail {
+        height: 100%;
+    }
+
+    .prodImgBlock {
+        height: fit-content;
+    }
+
+    .prodImg {
+        max-width: 100%;
+        min-height: 100%;
+    }
+}
+
+/************************ Responsive St ************************/
+
+@media only screen and (max-width: $mobile) {
+    .card {
+        .prodDetail {
+            height: fit-content;
+        }
+    }
+}
+
+/************************ Responsive Ed ************************/

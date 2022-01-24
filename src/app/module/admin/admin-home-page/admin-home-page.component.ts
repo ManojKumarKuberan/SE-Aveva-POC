@@ -8,18 +8,19 @@ import { Router } from '@angular/router';
 })
 export class AdminHomePageComponent implements OnInit {
 
-  subPage = 'addProduct';
+  subPage: any;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.subPage = 'addProduct';
   }
 
   back() {
     this.router.navigate(['/']);
   }
 
-  route(url: string){
+  route(url: string) {
     this.subPage = url;
   }
 

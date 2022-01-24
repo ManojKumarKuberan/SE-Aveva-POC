@@ -1,29 +1,29 @@
-.custHeader {
-    display: flex;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    width: -webkit-fill-available;
-    z-index: 10;
-    box-shadow: 1px 1px 5px 1px grey;
-    background: white;
+// .custHeader {
+//     display: flex;
+//     padding: 1rem;
+//     position: sticky;
+//     top: 0;
+//     width: -webkit-fill-available;
+//     z-index: 10;
+//     box-shadow: 1px 1px 5px 1px grey;
+//     background: white;
 
-    .home,
-    .feedback,
-    .back {
-        padding-right: 1rem;
-        cursor: pointer;
-    }
+//     .home,
+//     .feedback,
+//     .back {
+//         padding-right: 1rem;
+//         cursor: pointer;
+//     }
 
-    .rated {
-        margin-left: auto;
-        color: gold;
-    }
+//     .rated {
+//         margin-left: auto;
+//         color: gold;
+//     }
 
-    .active {
-        color: blue;
-    }
-}
+//     .active {
+//         color: blue;
+//     }
+// }
 
 .thanksMsg {
     text-align: center;

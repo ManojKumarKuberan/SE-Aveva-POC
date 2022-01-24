@@ -1,5 +1,8 @@
-<router-outlet>
-    <div class="loading-spinner" *ngIf="loading">
-        <div class="loader"></div>
-    </div>
-</router-outlet>
+<div class="app-container">
+    <router-outlet>
+        <div class="loading-spinner" *ngIf="loading">
+            <div class="loader"></div>
+        </div>
+    </router-outlet>
+</div>
+<app-footer></app-footer>

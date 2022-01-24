@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
 
   onSubmit(form: FormGroup) {
     const user = this.userService.validateUser(form.value);
-
     if (user)
       this.setUserAndNavigate(user);
     else

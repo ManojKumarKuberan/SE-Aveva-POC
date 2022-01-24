@@ -6,7 +6,13 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit, OnChanges {
-  @Input() products: any;
+  @Input() allProducts: any;
+  products: any;
+
+  searchFilter: any = '';
+  query: any;
+  productCategories = [];
+  selectedCategory: any;
 
   constructor() { }
 
@@ -14,9 +20,26 @@ export class ProductsComponent implements OnInit, OnChanges {
     if (changes['previousValue'] !== changes['currentValue']) {
       location.reload();
     }
+
+    this.loadLimitedProd(4);
+    this.loadProdCategories();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  loadLimitedProd(length: number) {
+    this.products = this.allProducts.slice(0, length);
+  }
+
+  loadProdCategories() {
+    this.productCategories = this.products.map((prod: any) => prod.category);
+    this.productCategories = [...new Set(this.productCategories)];
+    this.selectedCategory = this.productCategories;
+  }
+
+  loadMoreProducts() {
+    this.loadLimitedProd(this.products.length + 4);
+    this.loadProdCategories();
   }
 
 }

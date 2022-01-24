@@ -1,13 +1,14 @@
 <div id="login" class="row">
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+    <form class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-6" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
 
         <div class="formItem col-12">
             <h1 class="text-center">Hello User!</h1>
         </div>
 
         <div class="formItem col-12">
-            <label for="userName" class="col-5">UserName: </label>
-            <input id="userName" class="col-7" type="text" formControlName="userName">
+            <label for="userName" class="col-5">Phone No: </label>
+            <input id="userName" class="col-6" type="text" formControlName="userName" appPhoneMask
+                placeholder="(XXX) (XXX)-XXXX">
             <div class="alert alert-danger"
                 *ngIf="loginForm.get('userName')?.invalid && loginForm.get('userName')?.touched">
                 *Please provide a userName.
@@ -16,14 +17,14 @@
 
         <div class="formItem col-12">
             <label for="password" class="col-5">Password: </label>
-            <input id="password" class="col-7" type="password" formControlName="password">
+            <input id="password" class="col-6" type="password" formControlName="password" appPassword>
             <div class="alert alert-danger"
                 *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
                 *Please provide a password.
             </div>
         </div>
 
-        <div class="formItem col-12">
+        <div class="formItem col-11">
             <button type="submit" class="btn btn-primary sendBtn" [disabled]="loginForm.invalid">Login</button>
         </div>
 

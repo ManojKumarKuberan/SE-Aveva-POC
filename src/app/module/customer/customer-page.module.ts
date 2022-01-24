@@ -5,11 +5,14 @@ import { CustomerPageRoutingModule } from './customer-page-routing.module';
 import { ProductsComponent } from './products/products.component';
 import { CustHomePageComponent } from './cust-home-page/cust-home-page.component';
 import { FeedbackComponent } from './feedback/feedback.component';
-import { FormsModule } from '@angular/forms';
-import { TextareaAutosizeDirective } from 'src/app/utils/directives/textareaAutosizeDirective/textarea-autosize.directive';
-import { DisplayOrNotDirective } from 'src/app/utils/directives/displayOrNot/display-or-not.directive';
-import { RatingPipe } from 'src/app/utils/pipe/ratingPipe/rating.pipe';
 
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
+
+import { TextareaAutosizeDirective } from 'src/app/utils/directives/textareaAutosizeDirective/textarea-autosize.directive';
+import { SearchPipe } from 'src/app/utils/pipe/search/search.pipe';
+import { FilterPipe } from 'src/app/utils/pipe/filterPipe/filter.pipe';
+import { CommonsModule } from 'src/app/commons/commons.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,15 @@ import { RatingPipe } from 'src/app/utils/pipe/ratingPipe/rating.pipe';
     CustHomePageComponent,
     FeedbackComponent,
     TextareaAutosizeDirective,
-    DisplayOrNotDirective,
-    RatingPipe
+    SearchPipe,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     FormsModule,
-    CustomerPageRoutingModule
+    CommonsModule,
+    CustomerPageRoutingModule,
+    NgSelectModule
   ]
 })
 export class CustomerPageModule { }

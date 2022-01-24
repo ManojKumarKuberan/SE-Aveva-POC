@@ -1,10 +1,11 @@
+@import "../../../../assets/styles/common.scss";
+
 #feedback {
     display: flex;
     justify-content: center;
 
     form {
-        width: -webkit-fill-available;
-        margin: 1rem 19rem;
+        margin-top: 5%;
         padding: 1rem;
         box-shadow: 1px 1px 5px 1px grey;
 
@@ -21,7 +22,7 @@
         }
     }
 
-    .thanksMsg{
+    .thanksMsg {
         margin-top: 10rem;
     }
 }
